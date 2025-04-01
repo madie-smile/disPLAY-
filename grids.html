@@ -1,0 +1,277 @@
+
+<!-- readme first:
+- CSS Getting Started: https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started
+- https://www.w3schools.com/css/css_grid.asp
+- https://css-tricks.com/snippets/css/complete-guide-grid/
+- guide poster from CSS tricks: https://css-tricks.com/wp-content/uploads/2022/02/css-grid-poster.png
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grids Part 2</title>
+
+  <!--2. here is internal CSS, which is one of three ways to integrate CSS. check out: https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics -->
+
+<style>
+* { 
+    margin: 0;   /* Remove body margins */
+  }
+
+/* unvisited link */
+a:link {
+  color: hotpink;
+}
+
+/* visited link */
+a:visited {
+  color: hotpink;
+}
+
+/* hover link */
+a:hover {
+  color: hotpink;
+  background-color: darkblue;
+  transition: 2s;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+
+.navigation-div a:link, .navigation-div a:visited {
+    color:hotpink;
+} 
+
+div.relative {
+
+  position: relative;
+  left: 0px;
+
+}
+
+footer {
+
+  color: white;
+  background-color: black;
+  width: 100%;
+
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: -3px;
+  margin-left: 2%;
+  margin-top: 5%;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin-left: 2%;
+  width: 80vw;
+  padding-top: 2%;
+  padding-bottom: 4%;
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-align: left;
+  color: grey;
+}
+
+p {
+  font-size: 1rem;
+  margin-right: 1rem;
+  text-align: left;
+  margin-top: 5%;
+}
+
+
+/* figcaption and caption are default html tags for displaying images as figures, helpful for screen readers: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption */
+
+figcaption {
+  font-family: monospace;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+
+}
+
+.grid-container {
+  display: grid;
+  /* auto auto auto means three columns */
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+   /* turn off outlines
+  background-color: #2196F3; */ 
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2rem;
+}
+
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+
+/* responsive layout - makes a two column-layout instead of a three-column layout */
+@media (max-width: 800px) {
+.grid-container {
+  display: grid;
+  /* auto auto means two columns */
+  grid-template-columns: auto auto;
+  gap: 10px;
+    /* turn off background 
+  background-color: #2196F3;*/
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  margin-left: 2%;
+  width: 80vw;
+}
+
+}
+
+/* don't forget to close your style tag, if you use internal CSS, otherwise, it's best to use external stylesheets linked up in the link rel line */
+</style>
+
+<!-- don't forget to close your head section too -->
+</head>
+
+<!-- remember the sandwich analogy? the bread is the html container, the head section is the toppings, the style within the head is the grainy musturd. the body section is the protein, where all the visible content goes. 
+
+if you're still confused by the default html semantic structure of HTML, please refer to the Coding Tips PDF up on Canvas > Modules > cheers! 
+
+note: target="_blank" opens up a new tab, helpful for when you provide a link off the current site for all external links (instead of internal links)-->
+
+
+<body>
+
+<section>
+<h1>CSS Grids: Part 2</h1>
+  <h2>Use <a href="https://www.w3schools.com/css/css_grid.asp" target="_blank">CSS grids↗</a> when you have equal width items. If you need it, <a href="https://github.com/lange-lange/css-grids" target="_blank">get my code from Github (select 'code' > dropdown > download .zip)</a> and then open in your coding editor of choice. Below, notice <span style="color:grey"><i>how</i></span> the <span style="color:grey;">item number</span> corresponds to each <span style="color:grey;">grid item.</span> Then use <a href="https://www.w3schools.com/css/css3_mediaqueries.asp" target="_blank">@media queries</a> for each breakpoint to define how many items display on a row.
+  </h2>
+</section>
+
+<section>
+<div class="grid-container">
+  <div class="item1">
+	 <div class="relative">
+		<h3>1. First Item</h3>
+      <figure>
+        <img src="images/wwolfy.gif"><figcaption><span style="color:grey;">ABOVE: An animated GIF of the book <i>My Way to Typography</i> by Wolfgang Weingart.</span></figcaption>
+      </figure>
+	 </div>
+  </div>
+  
+  <div class="item2">
+	 <div class="relative">
+		<h3>2. Second Item</h3>
+      <figure>
+        <img src="images/d41586-022-00391-1_20117136.jpeg" width="100" height="100">
+        <figcaption><a href="https://www.nature.com/articles/d41586-022-00391-1" target="_blank">ABOVE: Nuclear-fusion reactor smashes energy record</a></figcaption>
+      </figure>
+    <p>I added a small paragraph below each image. Please download from Github > open the folder > and reverse engineer!</p>
+	 </div>
+  </div>
+
+  <div class="item3">
+	 <div class="relative">
+		<h3>3. Third Item</h3>
+      <figure>
+        <img src="images/voice-of-language-hero-lange-01.gif">
+        <figcaption><span style="color:grey;">ABOVE: An animated GIF of a GIF workshop.</span></figcaption>
+      </figure>
+    <p>CSS Grids makes sense to use if you have multiple equal columns and rows. Don't just copy, use it if you need it. Tweak as you see fit.</p>
+	 </div>
+  </div>  
+
+  <div class="item4"><h3>4. Forth Item</h3>
+        <figure>
+          <img src="images/a-s-corg-risograph-poster-2024-by-chris-lange-scaled.jpg">
+        </figure>
+  </div>
+  
+  <div class="item5"><h3>5. Starting to get it?</h3>
+        <figure>
+          <img src="images/student-press-revival_1747.jpeg">
+        </figure>
+  </div>
+  
+  <div class="item6"><h3>6. I hope so</h3>
+        <figure>
+          <img src="images/taupe.gif">
+        </figure>
+  </div>
+  
+  <div class="item7"><h3>7. It takes time, rest, and space</h3>
+        <figure>
+          <img src="images/sec1_rubegoldberg-landscape.jpeg">
+        </figure>
+  </div>
+  
+  <div class="item8"><h3>8. To handle stress with patience and grace</h3>
+        <figure>
+          <img src="images/dog-fashion-sunglasses.png">
+        </figure>  
+  </div>  
+
+</div>
+</section>
+
+  <!-- a footer is a default HTML semantic element. by using a footer, websites become more accessible to those who require assistive tech such as screen readers to navigate. check out: https://www.w3schools.com/html/html5_semantic_elements.asp -->
+
+<footer>
+  <div class="navigation-div">
+    <h2>References on this page: 
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started" target="_blank">Getting started with CSS.</a> 
+      <a href="https://www.w3schools.com/css/css_grid.asp" target="_blank">CSS Grids W3C schools tutorial</a>. 
+      <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS Grids Complete Guide</a>.
+      <a href="https://cssreference.io/typography/" target="_blank">CSS Typography</a>. 
+      <a href="https://www.w3schools.com/cssref/pr_dim_line-height.php" target="_blank">CSS Line Height Property.</a> Make your website more accessible using default 
+      <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">semantic elements such as footers.</a> 
+      <a href="https://www.w3schools.com/TAGS/tag_figcaption.asp" target="_blank">Add figure captions to your images.</a></h2>
+  </div>
+</footer>
+
+</body>
+</html>
+
+

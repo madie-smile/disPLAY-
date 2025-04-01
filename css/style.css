@@ -1,0 +1,307 @@
+/*F U L L  P A G E*/
+*{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #2B2B2B;
+}
+
+/*L I N K  D E C O R A T I O N*/
+a:link, a:visited{
+    text-decoration: none;
+}
+
+#display a:link, #display a:visited{
+    text-decoration: none;
+    color: #EBBCE7;
+}
+
+#display a:hover{
+    color: #B079AF;
+    transition: 2s;
+    font-size: 120%;
+}
+
+#create a:link, #create a:visited{
+    color: rgb(188, 214, 235);
+    transition: 1s;
+}
+
+#create a:hover{
+    color: #719665;
+    transition: 1s;
+    font-size: 120%;
+}
+
+#createactive a:link, #createactive a:visited{
+    color: #C9EBBC;
+}
+
+#createactive a:hover{
+    color: #719665;
+    transition: 1s;
+    font-size: 120%;
+}
+
+#share a:link, #share a:visited{
+    color: rgb(188, 214, 235);
+    transition: 1s;
+}
+
+#share a:hover{
+    color: #B39772;
+    transition: 1s;
+    font-size: 120%;
+}
+
+#shareactive a:link, #shareactive a:visited{
+    color: #EBD1AE;
+}
+
+#shareactive a:hover{
+    color: #B39772;
+    transition: 1s;
+    font-size: 120%;
+
+}
+
+#explore a:link, #explore a:visited{
+    color: rgb(188, 214, 235);
+    transition: 1s;
+}
+
+#explore a:hover{
+    color: #B079AF;
+    transition: 1s;
+    font-size: 120%;
+}
+
+#exploreactive a:link, #exploreactive a:visited{
+    color: #EBBCE7;
+}
+
+#exploreactive a:hover{
+    color: #B079AF;
+    transition: 1s;
+    font-size: 120%;
+
+}
+
+#jumplink a:link, #jumplink a:visited{
+    color: rgb(188, 214, 235);
+    transition: 1s;
+}
+
+#jumplink a:hover{
+    color: #658196;
+    transition: 0.5s;
+    font-size: 120%;
+
+}
+
+/*F O N T S*/
+@font-face {
+    font-family: 'Jacquard24';
+    src: url('/fonts/Jacquard24-Regular.woff') format('woff'),
+         url('/fonts/Jacquard24-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;        
+}
+
+@font-face{
+    font-family: 'Silkscreen';
+    src:    url('/fonts/Silkscreen-Regular.woff') format('woff'),
+            url('/fonts/Silkscreen-Regular.woff2') format('woff2');
+            font-style: normal;
+}
+
+@font-face{
+    font-family: "Micro5";
+    src:    url('/fonts/Micro5-Regular.woff') format('woff'),
+            url('/fonts/Micro5-Regular.woff2') format('woff2');
+            font-style: normal;
+}
+
+@font-face{
+    font-family: 'CourierNew';
+    src:    url('/fonts/CourierNewPSMT.woff') format('woff'),
+            url('/fonts/CourierNewPSMT.woff2') format('woff2');
+            font-style: normal;
+}
+
+/*B R E A K  P O I N T S*/
+@media (max-width:600px){
+    h1{
+        font-family: "Jacquard24";
+        color:#EBBCE7; 
+        text-align:center; 
+        font-size: 400%;
+        font-weight: 400;
+    }
+}
+
+@media (min-width:601px){
+    h1{
+        font-family: "Jacquard24";
+        color:#EBBCE7;
+        text-align:center; 
+        font-size: 900%;
+        font-weight: 400;
+    }
+}
+
+/**/
+@media (max-width:600px){
+    h2{
+        font-family: "Silkscreen";
+        color:rgb(188, 214, 235); 
+        text-align:center;
+        font-size: 60%; 
+    }
+}
+
+@media (min-width:601px){
+    h2{
+        font-family: "Silkscreen";
+        color:rgb(188, 214, 235); 
+        text-align:center; 
+        font-size: 130%;
+    }
+}
+
+/*T E X T  S T Y L E S*/
+p{
+    font-family:'CourierNew'; 
+    color:rgb(188, 214, 235); 
+    text-align:center; 
+    font-size: 10pt;
+    line-height: 1.25;
+    line-height: 1.25;
+    word-spacing: -50%;
+}
+
+li{
+    font-family:'CourierNew'; 
+    color:rgb(188, 214, 235); 
+    text-align:left; 
+    font-size: 10pt;
+    line-height: 1;
+    word-spacing: -50%;
+    margin: 2rem;
+}
+
+h3{
+    font-family: "Micro5";
+    color:rgb(188, 214, 235); 
+    text-align:center; 
+    font-size: 200%;
+}
+
+h4{
+    font-family:'CourierNew'; 
+    color:rgb(188, 214, 235); 
+    text-align:left; 
+    font-size: 10pt;
+    line-height: 1.25;
+    line-height: 1.25;
+    word-spacing: -50%;
+}
+
+/*B U T T O N S*/
+.backtotop{
+position: fixed;
+right: 3%;
+bottom: 3%;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+/*pixels are great for little specific components*/
+background-color: rgb(188, 214, 235);
+filter: drop-shadow(1px 1px 10px rgb(188, 214, 235));
+font-family:'Courier New'; 
+font-size: 2rem;
+text-align: center;
+}
+
+/*button{
+    font-family: "Silkscreen", sans-serif;
+    font-size: 100%;
+    border-radius: 1rem;
+    padding: 5px;
+    background-color: #EBD1AE;
+    border: 4px solid #B39772;
+}
+
+button:hover{
+    transition: 0.5s;
+    background-color: #B39772;
+    border: 4px solid #EBD1AE;
+    border-radius: 1rem;
+    font-weight: 800;
+}*/
+
+#button a:link{
+    font-family: "Silkscreen", sans-serif;
+    font-size: 100%;
+    border-radius: 1rem;
+    padding: 5px;
+    background-color: #EBD1AE;
+    border: 4px solid #B39772;
+    color: #B39772;
+    transition: 1s;
+}
+
+#button a:hover{
+    background-color: #B39772;
+    border: 4px solid #EBD1AE;
+    border-radius: 1rem;
+    font-size: 120%;
+    font-weight: 800;
+    color: #EBD1AE;
+    transition: 1s;
+}
+
+/*I M A G E S  &  G I F S*/
+img{
+    width: 100%;
+    height: auto;
+    max-width: 1600px;
+}
+
+.gifs {
+    height: auto;
+    max-width: 20px;
+}
+
+/*G R I D S*/
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* auto auto auto - three columns*/
+    padding: 10px;
+}
+
+.container > div {
+    padding: 10px;
+    text-align: center;
+}
+
+/*.relative {
+    position: relative;
+} */
+/*defines relative position class. use as a super basic umbrella term to place absolute elements into. doesn't even need to have colours. can just be defined as relative. be relatives. be waves*/
+
+/*.absolute {
+    position: absolute;
+    margin: 20%;
+    bottom: 1rem;
+    right: 1rem;
+}*/
+/*defines absolute position class (to be used within relative position)*/
+
+/*input{
+    width: 25%;
+    margin: auto;
+    text-align: center;
+}*/
