@@ -1,6 +1,7 @@
 /*F U L L  P A G E*/
 *{
     scroll-behavior: smooth;
+    
 }
 
 body{
@@ -129,6 +130,12 @@ a:link, a:visited{
             url('/fonts/CourierNewPSMT.woff2') format('woff2');
             font-style: normal;
 }
+@font-face{
+    font-family: 'CourierNewBold';
+    src:    url('/fonts/CourierNewPS-BoldMT.woff') format('woff'),
+            url('/fonts/CourierNewPS-BoldMT.woff2') format('woff2');
+            font-style: normal;
+}
 
 /*B R E A K  P O I N T S*/
 @media (max-width:600px){
@@ -147,6 +154,16 @@ a:link, a:visited{
         color:#EBBCE7;
         text-align:center; 
         font-size: 900%;
+        font-weight: 400;
+    }
+}
+
+@media (min-width:900px){
+    h1{
+        font-family: "Jacquard24";
+        color:#EBBCE7;
+        text-align:center; 
+        font-size: 1500%;
         font-weight: 400;
     }
 }
@@ -170,8 +187,78 @@ a:link, a:visited{
     }
 }
 
+@media (min-width:900px){
+    h2{
+        font-family: "Silkscreen";
+        color:rgb(188, 214, 235); 
+        text-align:center; 
+        font-size: 200%;
+    }
+}
+
+/**/
+@media (max-width:600px){
+    h3{
+        font-family: "Micro5";
+        color:rgb(188, 214, 235); 
+        text-align:center; 
+        font-size: 200%;
+    }
+}
+
+@media (min-width:601px){
+    h3{
+        font-family: "Micro5";
+        color:rgb(188, 214, 235); 
+        text-align:center; 
+        font-size: 400%;
+        margin-top: 5%;
+        margin-bottom: 0%;
+        transition: 1s;
+    }
+}
+
+@media (min-width:900px){
+    h3{
+        font-family: "Micro5";
+        color:rgb(188, 214, 235); 
+        text-align:center; 
+        font-size: 900%;
+    }
+}
+
+/*MADIE: BREAK POINTS FOR BODY/ PARAGRAPH TEXT + consolidate text styles*/
+
 /*T E X T  S T Y L E S*/
 p{
+    font-family:'CourierNew'; 
+    color:rgb(188, 214, 235); 
+    text-align:left; 
+    font-size: 10pt;
+    line-height: 1.25;
+    line-height: 1.25;
+    word-spacing: -50%;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/*BOLD*/
+h5{
+    font-family:'CourierNewBold'; 
+    color:rgb(188, 214, 235); 
+    text-align:left; 
+    font-size: 10pt;
+    line-height: 1.25;
+    line-height: 1.25;
+    word-spacing: -50%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*CENTRE*/
+h6{
     font-family:'CourierNew'; 
     color:rgb(188, 214, 235); 
     text-align:center; 
@@ -179,6 +266,7 @@ p{
     line-height: 1.25;
     line-height: 1.25;
     word-spacing: -50%;
+    margin-top: 5%;
 }
 
 li{
@@ -189,13 +277,10 @@ li{
     line-height: 1;
     word-spacing: -50%;
     margin: 2rem;
-}
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 10%;
 
-h3{
-    font-family: "Micro5";
-    color:rgb(188, 214, 235); 
-    text-align:center; 
-    font-size: 200%;
 }
 
 h4{
@@ -211,18 +296,33 @@ h4{
 /*B U T T O N S*/
 .backtotop{
 position: fixed;
-right: 3%;
-bottom: 3%;
+right: 40px;
+bottom: 20px;
 border-radius: 50%;
-width: 40px;
-height: 40px;
+width: 30px;
+height: 30px;
 /*pixels are great for little specific components*/
 background-color: rgb(188, 214, 235);
-filter: drop-shadow(1px 1px 10px rgb(188, 214, 235));
 font-family:'Courier New'; 
-font-size: 2rem;
+font-size: 1.5rem;
 text-align: center;
 }
+
+.backtotop:hover{
+    position: fixed;
+    right: 40px;
+    bottom: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    /*pixels are great for little specific components*/
+    background-color: rgb(188, 214, 235);
+    filter: drop-shadow(1px 1px 10px rgb(188, 214, 235));
+    font-family:'Courier New'; 
+    font-size: 2rem;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    }
 
 /*button{
     font-family: "Silkscreen", sans-serif;
@@ -286,6 +386,114 @@ img{
     padding: 10px;
     text-align: center;
 }
+
+/*R E S P O N S I V E  I M A G E  G R I D*/
+/* https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+/*M A S I O N A R Y - https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/*/
+/*
+:root {
+    counter-reset: masonry;
+  }
+  .masonry {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    grid-auto-rows: 0;
+  }
+
+  .masonry-item {
+    border-radius: 5px;
+  }
+
+  .masonry-item {
+     background-color: #eee;
+     border-radius: 5px;
+     overflow: hidden;
+  }
+
+  .masonry-item,
+  .masonry-item img {
+     position: relative;
+  }
+
+  .masonry-item:after {
+    content: counter(masonry);
+    counter-increment: masonry;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    height: 100%;
+    width: 100%;
+    font-family: 'silkscreen';
+    color: #2B2B2B;
+    font-size: 0%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: #2b2b2b45;
+    transition: all .5s ease-in-out;
+
+  }
+
+  .masonry-item:hover:after {
+    font-size: 800%;
+    background-color: #2b2b2b00;
+  }
+*/
 
 /*.relative {
     position: relative;
