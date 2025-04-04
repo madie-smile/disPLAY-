@@ -8,6 +8,28 @@ body{
     background-color: #2B2B2B;
 }
 
+.relative {
+    position: relative;
+} 
+/*defines relative position class. use as a super basic umbrella term to place absolute elements into. doesn't even need to have colours. can just be defined as relative. be relatives. be waves*/
+
+.absolute {
+    position: absolute;
+    margin: 20%;
+    bottom: 1rem;
+    right: 1rem;
+}
+/*defines absolute position class (to be used within relative position)*/
+
+input {
+    width: 50%;
+    margin-left: 20%;
+    text-align: left;
+    background-color: rgb(188, 214, 235);
+    border-radius: 1rem; 
+    border-color: #658196;
+}
+
 /*L I N K  D E C O R A T I O N*/
 a:link, a:visited{
     text-decoration: none;
@@ -104,40 +126,42 @@ a:link, a:visited{
 /*F O N T S*/
 @font-face {
     font-family: 'Jacquard24';
-    src: url('/fonts/Jacquard24-Regular.woff') format('woff'),
-         url('/fonts/Jacquard24-Regular.woff2') format('woff2');
+    src: url('fonts/Jacquard24-Regular.woff') format('woff'),
+         url('fonts/Jacquard24-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;        
 }
 
 @font-face{
     font-family: 'Silkscreen';
-    src:    url('/fonts/Silkscreen-Regular.woff') format('woff'),
-            url('/fonts/Silkscreen-Regular.woff2') format('woff2');
+    src:    url('fonts/Silkscreen-Regular.woff') format('woff'),
+            url('fonts/Silkscreen-Regular.woff2') format('woff2');
             font-style: normal;
 }
 
 @font-face{
     font-family: "Micro5";
-    src:    url('/fonts/Micro5-Regular.woff') format('woff'),
-            url('/fonts/Micro5-Regular.woff2') format('woff2');
+    src:    url('fonts/Micro5-Regular.woff') format('woff'),
+            url('fonts/Micro5-Regular.woff2') format('woff2');
             font-style: normal;
 }
 
 @font-face{
     font-family: 'CourierNew';
-    src:    url('/fonts/CourierNewPSMT.woff') format('woff'),
-            url('/fonts/CourierNewPSMT.woff2') format('woff2');
+    src:    url('fonts/CourierNewPSMT.woff') format('woff'),
+            url('fonts/CourierNewPSMT.woff2') format('woff2');
             font-style: normal;
 }
 @font-face{
     font-family: 'CourierNewBold';
-    src:    url('/fonts/CourierNewPS-BoldMT.woff') format('woff'),
-            url('/fonts/CourierNewPS-BoldMT.woff2') format('woff2');
+    src:    url('fonts/CourierNewPS-BoldMT.woff') format('woff'),
+            url('fonts/CourierNewPS-BoldMT.woff2') format('woff2');
             font-style: normal;
 }
 
 /*B R E A K  P O I N T S*/
+
+/*h1*/
 @media (max-width:600px){
     h1{
         font-family: "Jacquard24";
@@ -168,7 +192,7 @@ a:link, a:visited{
     }
 }
 
-/**/
+/*h2*/
 @media (max-width:600px){
     h2{
         font-family: "Silkscreen";
@@ -196,7 +220,7 @@ a:link, a:visited{
     }
 }
 
-/**/
+/*h3*/
 @media (max-width:600px){
     h3{
         font-family: "Micro5";
@@ -243,7 +267,7 @@ p{
     margin-right: 20%;
 }
 
-/*BOLD*/
+/*BOLD P*/
 h5{
     font-family:'CourierNewBold'; 
     color:rgb(188, 214, 235); 
@@ -257,7 +281,7 @@ h5{
     margin-right: 10%;
 }
 
-/*CENTRE*/
+/*CENTRE P*/
 h6{
     font-family:'CourierNew'; 
     color:rgb(188, 214, 235); 
@@ -283,16 +307,6 @@ li{
 
 }
 
-h4{
-    font-family:'CourierNew'; 
-    color:rgb(188, 214, 235); 
-    text-align:left; 
-    font-size: 10pt;
-    line-height: 1.25;
-    line-height: 1.25;
-    word-spacing: -50%;
-}
-
 /*B U T T O N S*/
 .backtotop{
 position: fixed;
@@ -301,7 +315,6 @@ bottom: 20px;
 border-radius: 50%;
 width: 30px;
 height: 30px;
-/*pixels are great for little specific components*/
 background-color: rgb(188, 214, 235);
 font-family:'Courier New'; 
 font-size: 1.5rem;
@@ -315,7 +328,6 @@ text-align: center;
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    /*pixels are great for little specific components*/
     background-color: rgb(188, 214, 235);
     filter: drop-shadow(1px 1px 10px rgb(188, 214, 235));
     font-family:'Courier New'; 
@@ -443,73 +455,50 @@ img{
     }
   }
 
-/*M A S I O N A R Y - https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/*/
-/*
-:root {
-    counter-reset: masonry;
-  }
-  .masonry {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
-    grid-auto-rows: 0;
-  }
-
-  .masonry-item {
-    border-radius: 5px;
-  }
-
-  .masonry-item {
-     background-color: #eee;
-     border-radius: 5px;
-     overflow: hidden;
-  }
-
-  .masonry-item,
-  .masonry-item img {
-     position: relative;
-  }
-
-  .masonry-item:after {
-    content: counter(masonry);
-    counter-increment: masonry;
-    position: absolute;
-    top: 0;
-    left: 0; 
-    height: 100%;
+/*F O R M*/
+/*input[type=text], select {
     width: 100%;
-    font-family: 'silkscreen';
-    color: #2B2B2B;
-    font-size: 0%;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    background-color: #2b2b2b45;
-    transition: all .5s ease-in-out;
-
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
   }
-
-  .masonry-item:hover:after {
-    font-size: 800%;
-    background-color: #2b2b2b00;
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
-*/
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }/*
 
-/*.relative {
-    position: relative;
-} */
-/*defines relative position class. use as a super basic umbrella term to place absolute elements into. doesn't even need to have colours. can just be defined as relative. be relatives. be waves*/
 
-/*.absolute {
-    position: absolute;
-    margin: 20%;
-    bottom: 1rem;
-    right: 1rem;
-}*/
-/*defines absolute position class (to be used within relative position)*/
-
-/*input{
-    width: 25%;
-    margin: auto;
-    text-align: center;
-}*/
+/*divider line*/
+/*line {
+    width: 100%;
+    height: 2px;
+    background-color:  rgb(188, 214, 235);
+    animation-name: example;
+    animation-duration: 5s;
+    margin-left:20%;
+  }
+  
+  @keyframes example {
+    from {background-color:  rgb(188, 214, 235);}
+    to {background-color: #B39772;}
+  }*/
