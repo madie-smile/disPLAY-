@@ -41,8 +41,10 @@ a:link, a:visited{
 }
 
 #display a:hover{
-    color: #B079AF;
-    transition: 2s;
+    animation-name: text;
+    animation-duration: 3s;
+    transition: 1.5s;
+    animation-iteration-count: infinite;
     font-size: 120%;
 }
 
@@ -169,6 +171,7 @@ a:link, a:visited{
         text-align:center; 
         font-size: 400%;
         font-weight: 400;
+        transition: 1s;
     }
 }
 
@@ -179,6 +182,7 @@ a:link, a:visited{
         text-align:center; 
         font-size: 900%;
         font-weight: 400;
+        transition: 1s;
     }
 }
 
@@ -189,6 +193,7 @@ a:link, a:visited{
         text-align:center; 
         font-size: 1500%;
         font-weight: 400;
+        transition: 1s;
     }
 }
 
@@ -199,6 +204,7 @@ a:link, a:visited{
         color:rgb(188, 214, 235); 
         text-align:center;
         font-size: 60%; 
+        transition: 1s;
     }
 }
 
@@ -208,6 +214,7 @@ a:link, a:visited{
         color:rgb(188, 214, 235); 
         text-align:center; 
         font-size: 130%;
+        transition: 1s;
     }
 }
 
@@ -217,6 +224,7 @@ a:link, a:visited{
         color:rgb(188, 214, 235); 
         text-align:center; 
         font-size: 200%;
+        transition: 1s;
     }
 }
 
@@ -227,6 +235,7 @@ a:link, a:visited{
         color:rgb(188, 214, 235); 
         text-align:center; 
         font-size: 200%;
+        transition: 1s;
     }
 }
 
@@ -248,6 +257,7 @@ a:link, a:visited{
         color:rgb(188, 214, 235); 
         text-align:center; 
         font-size: 900%;
+        transition: 1s;
     }
 }
 
@@ -454,6 +464,23 @@ img{
       max-width: 100%;
     }
   }
+
+
+/*T E X T  A N I M A T I O N*/
+.text {
+    animation-name: text;
+    animation-duration: 10s;
+    transition: smooth;
+    animation-iteration-count: infinite;
+}
+
+@keyframes text {
+    0% {color: #EBD1AE;}
+    25% {color: #C9EBBC;}
+    50% {color: #BCD6EB;}
+    75% {color: #EBBCE7;}
+    100% {color: #EBD1AE;}
+}
 
 /*F O R M*/
 /*input[type=text], select {
