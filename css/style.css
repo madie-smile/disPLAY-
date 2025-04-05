@@ -1,6 +1,7 @@
 /*F U L L  P A G E*/
 *{
     scroll-behavior: smooth;
+    cursor: url('pixelart/cursor_blue2.png'), pointer;
     
 }
 
@@ -38,6 +39,7 @@ a:link, a:visited{
 #display a:link, #display a:visited{
     text-decoration: none;
     color: #EBBCE7;
+    cursor: url('pixelart/cursor_pink1.png'), pointer;
 }
 
 #display a:hover{
@@ -51,6 +53,7 @@ a:link, a:visited{
 #create a:link, #create a:visited{
     color: rgb(188, 214, 235);
     transition: 1s;
+    cursor: url('pixelart/cursor_green1.png'), pointer;
 }
 
 #create a:hover{
@@ -61,6 +64,7 @@ a:link, a:visited{
 
 #createactive a:link, #createactive a:visited{
     color: #C9EBBC;
+    cursor: url('pixelart/cursor_green1.png'), pointer;
 }
 
 #createactive a:hover{
@@ -72,6 +76,7 @@ a:link, a:visited{
 #share a:link, #share a:visited{
     color: rgb(188, 214, 235);
     transition: 1s;
+    cursor: url('pixelart/cursor_yellow1.png'), pointer;
 }
 
 #share a:hover{
@@ -82,6 +87,7 @@ a:link, a:visited{
 
 #shareactive a:link, #shareactive a:visited{
     color: #EBD1AE;
+    cursor: url('pixelart/cursor_yellow1.png'), pointer;
 }
 
 #shareactive a:hover{
@@ -94,6 +100,7 @@ a:link, a:visited{
 #explore a:link, #explore a:visited{
     color: rgb(188, 214, 235);
     transition: 1s;
+    cursor: url('pixelart/cursor_pink1.png'), pointer;
 }
 
 #explore a:hover{
@@ -104,6 +111,7 @@ a:link, a:visited{
 
 #exploreactive a:link, #exploreactive a:visited{
     color: #EBBCE7;
+    cursor: url('pixelart/cursor_pink1.png'), pointer;
 }
 
 #exploreactive a:hover{
