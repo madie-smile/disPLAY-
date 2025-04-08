@@ -132,6 +132,19 @@ a:link, a:visited{
 
 }
 
+#footer a:link, #jumplink a:visited{
+    color: rgb(188, 214, 235);
+    transition: 1s;
+    font-size: 8pt;
+}
+
+#footer a:hover{
+    color: #2B2B2B;
+    transition: 0.5s;
+    font-size: 110%;
+
+}
+
 /*F O N T S*/
 @font-face {
     font-family: 'Jacquard24';
@@ -169,6 +182,34 @@ a:link, a:visited{
 }
 
 /*B R E A K  P O I N T S*/
+/*p*/
+@media (max-width:600px){
+p{
+    font-family:'CourierNew'; 
+    color:rgb(188, 214, 235); 
+    text-align:left; 
+    font-size: 10pt;
+    line-height: 1.25;
+    line-height: 1.25;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+}
+
+@media (min-width:601px){
+    p{
+        font-family:'CourierNew'; 
+        color:rgb(188, 214, 235); 
+        text-align:left; 
+        font-size: 14pt;
+        line-height: 1.25;
+        line-height: 1.25;
+        margin-top: 5%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
 
 /*h1*/
 @media (max-width:600px){
@@ -268,60 +309,128 @@ a:link, a:visited{
     }
 }
 
-/*MADIE: BREAK POINTS FOR BODY/ PARAGRAPH TEXT + consolidate text styles*/
-
-/*T E X T  S T Y L E S*/
-p{
+/*EXPLORE P*/
+@media (max-width:600px){
+h4{
     font-family:'CourierNew'; 
-    color:rgb(188, 214, 235); 
-    text-align:left; 
-    font-size: 10pt;
-    line-height: 1.25;
-    line-height: 1.25;
-    word-spacing: -50%;
-    margin-top: 5%;
-    margin-left: 20%;
-    margin-right: 20%;
+    text-align:center;
+    background-color: rgb(188, 214, 235);
+    width: 100%;
+    height: 150px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    color:#2B2B2B; 
+    font-size: 12pt;
+    line-height: 2;
+    margin-top: 1%;
+    margin-bottom: 10%;
+}
 }
 
+@media (min-width:601px){
+    h4{
+        font-family:'CourierNew'; 
+        text-align:center;
+        background-color: rgb(188, 214, 235);
+        width: 100%;
+        height: 150px;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        color:#2B2B2B; 
+        font-size: 14pt;
+        line-height: 2;
+        margin-top: 1%;
+        margin-bottom: 10%;
+    }
+    }
+
 /*BOLD P*/
+@media (max-width:600px){
 h5{
     font-family:'CourierNewBold'; 
     color:rgb(188, 214, 235); 
     text-align:left; 
-    font-size: 10pt;
+    font-size: 12pt;
     line-height: 1.25;
-    line-height: 1.25;
-    word-spacing: -50%;
     margin-top: 10%;
     margin-left: 10%;
     margin-right: 10%;
 }
+}
+
+@media (min-width:601px){
+    h5{
+        font-family:'CourierNewBold'; 
+        color:rgb(188, 214, 235); 
+        text-align:left; 
+        font-size: 14pt;
+        line-height: 1.25;
+        margin-top: 10%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    }
 
 /*CENTRE P*/
+@media (max-width:600px){
 h6{
     font-family:'CourierNew'; 
     color:rgb(188, 214, 235); 
     text-align:center; 
-    font-size: 10pt;
+    font-size: 12pt;
     line-height: 1.25;
-    line-height: 1.25;
-    word-spacing: -50%;
     margin-top: 5%;
 }
+}
 
+@media (min-width:601px){
+h6{
+    font-family:'CourierNew'; 
+    color:rgb(188, 214, 235); 
+    text-align:center; 
+    font-size: 14pt;
+    line-height: 1.25;
+    margin-top: 5%;
+    }
+}
+
+footer{
+    font-family:'CourierNew'; 
+    color:rgb(188, 214, 235); 
+    text-align:left; 
+    font-size: 8pt;
+    line-height: 1.25;
+    margin-top: 5%;
+    width:100%;
+}
+
+/*LISTS*/
+@media (max-width:600px){
 li{
     font-family:'CourierNew'; 
     color:rgb(188, 214, 235); 
     text-align:left; 
-    font-size: 10pt;
+    font-size: 12pt;
     line-height: 1;
-    word-spacing: -50%;
     margin: 2rem;
     margin-top: 5%;
     margin-left: 15%;
     margin-right: 10%;
+}
+}
 
+@media (min-width:601px){
+    li{
+        font-family:'CourierNew'; 
+        color:rgb(188, 214, 235); 
+        text-align:left; 
+        font-size: 14pt;
+        line-height: 1;
+        margin: 2rem;
+        margin-top: 5%;
+        margin-left: 15%;
+        margin-right: 10%;
+    }
 }
 
 /*B U T T O N S*/
@@ -412,6 +521,19 @@ img{
 }
 
 .container > div {
+    padding: 10px;
+    text-align: center;
+}
+
+/*F O O T E R*/
+.footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    background-color: #658196;
+}
+
+.footer> div {
     padding: 10px;
     text-align: center;
 }
@@ -544,6 +666,7 @@ input[type=text], select {
     background-color: #658196;
     border: 4px solid #BCD6EB;
     margin-bottom: 10%;
+    color: #2B2B2B;
   }
 
   input[type=submit]:hover {
