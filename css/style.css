@@ -132,7 +132,7 @@ a:link, a:visited{
 
 }
 
-#footer a:link, #jumplink a:visited{
+#footer a:link, #footer a:visited{
     color: rgb(188, 214, 235);
     transition: 1s;
     font-size: 8pt;
