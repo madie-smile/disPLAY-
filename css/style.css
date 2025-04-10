@@ -121,11 +121,13 @@ a:link, a:visited{
 }
 
 #jumplink a:link, #jumplink a:visited{
+    position: sticky;
     color: rgb(188, 214, 235);
     transition: 1s;
 }
 
 #jumplink a:hover{
+    position: sticky;
     color: #658196;
     transition: 0.5s;
     font-size: 120%;
@@ -716,7 +718,25 @@ input[type=text], select {
     visibility: visible;
   }
   
+/*S T I C K Y ~ https://www.w3schools.com/css/tryit.asp?filename=trycss_position_sticky*/
+div.sticky {
+    position: sticky;
+    top: 0;
+    background-color: #BCD6EB;
+    width: 70%;
+    margin-left: 15%;
+    border-bottom-left-radius: 50rem;
+    border-bottom-right-radius: 50rem;
+    font-size: 80%;
+}
 
+/*div#jumpsticky {
+    position: sticky;
+    top: 0;
+    background-color: #2B2B2B;
+    width: 30%;
+    margin-left: 5%;
+}*/
 
 /*divider line*/
 /*line {
