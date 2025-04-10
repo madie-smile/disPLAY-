@@ -56,13 +56,26 @@
 <!--F O R M S [credit: Sara, Via Chris] [https://www.w3schools.com/css/tryit.asp?filename=trycss_forms] [https://getform.io/]-->
         <div>
             <form action="https://getform.io/f/ajjmveya" method="POST">
-              <label for="name"><h2>name</h2></label>
+              
+              <label for="name" class="tooltip"><h2>name &#8505;</h2> 
+                <span class="tooltiptext">share your name, artist name, or remain anonymous
+            </span>
+            </label>
               <input type="text" id="name" name="firstname" placeholder="your name..."><br>
           
-              <label for="email"><h2>email</h2></label>
+              <label for="email" class="tooltip"><h2>email &#8505;</h2> 
+                <span class="tooltiptext">the best email to contact you about your submission</span>
+            </label>
               <input type="text" id="email" name="email" placeholder="your email..."><br>
+
+              <label for="email" class="tooltip"><h2>font &#8505;</h2> 
+                <span class="tooltiptext">give your font a name</span>
+            </label>
+              <input type="text" id="email" name="email" placeholder="your font name..."><br>
           
-              <label for="file"><h2>file</h2></label>
+              <label for="file"class="tooltip"><h2>file &#8505;</h2> 
+                <span class="tooltiptext">attach any images or font files associated with your font</span>
+            </label>
               <input type="file"><br>
             
               <input type="submit" value="submit">

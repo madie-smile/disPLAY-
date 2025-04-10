@@ -614,7 +614,6 @@ img{
 /*F O R M*/
 input[type=text], select {
     width: 60%;
-    align-items: ce;
     padding: 12px 20px;
     margin-left: 20%;
     margin-bottom: 5%;
@@ -655,7 +654,8 @@ input[type=text], select {
     border-radius: 100px;
     cursor: pointer;
     font-family: 'Courier New', Courier, monospace;
-  }
+    color:#2B2B2B;
+}
   
   input[type=submit] {
     font-family: "Silkscreen", sans-serif;
@@ -675,6 +675,45 @@ input[type=text], select {
     border: 4px solid #658196;
     border-radius: 100px;
     font-weight: 800;
+  }
+  
+/*T O O L  T I P ~ Idea Credit: Mia ~https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom*/  
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 50%;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #EBBCE7;
+    color: #2B2B2B;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    margin-left: -1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10pt;
+    padding: 10pt;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:#EBBCE7 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
   }
   
 
