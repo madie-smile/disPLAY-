@@ -359,17 +359,17 @@ h5{
 }
 
 @media (min-width:601px){
-    h5{
-        font-family:'CourierNewBold'; 
-        color:rgb(188, 214, 235); 
-        text-align:left; 
-        font-size: 14pt;
-        line-height: 1.25;
-        margin-top: 10%;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    }
+h5{
+    font-family:'CourierNewBold'; 
+    color:rgb(188, 214, 235); 
+    text-align:left; 
+    font-size: 14pt;
+    line-height: 1.25;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+}
 
 /*CENTRE P*/
 @media (max-width:600px){
@@ -410,7 +410,7 @@ li{
     font-family:'CourierNew'; 
     color:rgb(188, 214, 235); 
     text-align:left; 
-    font-size: 12pt;
+    font-size: 10pt;
     line-height: 1;
     margin: 2rem;
     margin-top: 5%;
