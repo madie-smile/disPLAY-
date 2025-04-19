@@ -219,7 +219,7 @@ p{
         font-family: "Jacquard24";
         color:#EBBCE7; 
         text-align:center; 
-        font-size: 400%;
+        font-size: 280%;
         font-weight: 400;
         transition: 1s;
     }
@@ -322,10 +322,17 @@ h4{
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     color:#2B2B2B; 
-    font-size: 12pt;
-    line-height: 2;
+    font-size: 9pt;
+    line-height: 2rem;
     margin-top: 1%;
     margin-bottom: 10%;
+    border-color: #658196;
+    border-width: 20%;
+}
+h4:hover{
+    background-color: #EBBCE7;
+    font-size: 11pt;
+    transition: 1s;
 }
 }
 
@@ -339,10 +346,15 @@ h4{
         border-bottom-left-radius: 100px;
         border-bottom-right-radius: 100px;
         color:#2B2B2B; 
-        font-size: 14pt;
-        line-height: 2;
+        font-size: 10pt;
+        line-height: 2rem;
         margin-top: 1%;
         margin-bottom: 10%;
+    }
+    h4:hover{
+        background-color: #EBBCE7;
+        font-size: 11pt;
+        transition: 0.5s;
     }
     }
 
@@ -597,7 +609,7 @@ img{
   }
 
 
-/*T E X T  A N I M A T I O N*/
+/*T E X T  C O L O U R  A N I M A T I O N*/
 .text {
     animation-name: text;
     animation-duration: 10s;
@@ -613,6 +625,20 @@ img{
     100% {color: #EBD1AE;}
 }
 
+/*T E X T  S L I D E  A N I M A T I O N*/
+@keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(200px);
+    }
+  }
+  
+  .moving-text {
+    animation: slide 3s infinite linear;
+  }
+
 /*F O R M*/
 input[type=text], select {
     width: 60%;
@@ -625,18 +651,6 @@ input[type=text], select {
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
     background-color: #BCD6EB;
-    color: #2B2B2B;
-  }
-  
-  input[type=submit] {
-    width: 40%;
-    background-color: #BCD6EB;
-    padding: 14px 20px;
-    margin-left: 30%;
-    border: 2px solid #658196;
-    border-radius: 100px;
-    cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
   }
 
   input:focus {
@@ -654,9 +668,8 @@ input[type=text], select {
     margin-bottom: 10%;
     border: 2px solid #658196;
     border-radius: 100px;
-    cursor: pointer;
     font-family: 'Courier New', Courier, monospace;
-    color:#2B2B2B;
+    color:#658196;
 }
   
   input[type=submit] {
@@ -668,8 +681,9 @@ input[type=text], select {
     background-color: #658196;
     border: 4px solid #BCD6EB;
     margin-bottom: 10%;
-    color: #2B2B2B;
-  }
+    color:#BCD6EB;  
+    width: 60%;
+}
 
   input[type=submit]:hover {
     transition: 0.5s;
@@ -677,10 +691,17 @@ input[type=text], select {
     border: 4px solid #658196;
     border-radius: 100px;
     font-weight: 800;
+    color:#658196;
   }
   
 /*T O O L  T I P ~ Idea Credit: Mia ~https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_arrow_bottom*/  
-.tooltip {
+.tooltip{
+    position: relative;
+    display: inline-block;
+    margin-left: 50%;
+  }
+
+  .tooltip:active {
     position: relative;
     display: inline-block;
     margin-left: 50%;
@@ -688,8 +709,8 @@ input[type=text], select {
   
   .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
-    background-color: #EBBCE7;
+    width: 8rem;
+    background-color: #EBD1AE;
     color: #2B2B2B;
     text-align: center;
     border-radius: 6px;
@@ -697,7 +718,7 @@ input[type=text], select {
     position: absolute;
     z-index: 1;
     bottom: 100%;
-    margin-left: -1.5rem;
+    margin-left: -8rem;
     font-family: 'Courier New', Courier, monospace;
     font-size: 10pt;
     padding: 10pt;
@@ -707,11 +728,11 @@ input[type=text], select {
     content: "";
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: 90%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color:#EBBCE7 transparent transparent transparent;
+    border-color:#EBD1AE transparent transparent transparent;
   }
   
   .tooltip:hover .tooltiptext {
@@ -752,3 +773,26 @@ div.sticky {
     from {background-color:  rgb(188, 214, 235);}
     to {background-color: #B39772;}
   }*/
+
+ 
+
+.download {
+    width: 1rem; 
+    height: 1rem;
+    background-image: url('pixelart/download.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+.download:hover{
+    width: 2rem; 
+    height: 2rem;
+    transition:0.25s;
+}
+.download:active{
+    width: 0.75rem; 
+    height: 0.75rem;
+    transition:0.25s;
+}
