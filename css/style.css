@@ -11,6 +11,10 @@ body{
 .relative {
     position: relative;
 } 
+
+.responsive{
+    margin-top: 3rem;
+}
 /*defines relative position class. use as a super basic umbrella term to place absolute elements into. doesn't even need to have colours. can just be defined as relative. be relatives. be waves*/
 
 .absolute {
@@ -775,7 +779,7 @@ div.sticky {
   }*/
 
  
-
+/*D O W N L O A D  I C O N*/
 .download {
     width: 1rem; 
     height: 1rem;
