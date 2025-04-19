@@ -39,6 +39,31 @@ a:link, a:visited{
     text-decoration: none;
 }
 
+#caligraphr a:link, #caligraphr a:visited{
+    font-family: "Silkscreen", sans-serif;
+    font-size: 100%;
+    border-radius: 1rem;
+    padding: 5px;
+    background-color: #658196;
+    border: 4px solid #BCD6EB;
+    color: #BCD6EB;
+    margin-left: 25%;
+    transition:0.5s;
+
+}
+
+#caligraphr a:hover{
+    font-family: "Silkscreen", sans-serif;
+    font-size: 100%;
+    border-radius: 1rem;
+    padding: 5px;
+    background-color: #BCD6EB;
+    border: 4px solid #658196;
+    color: #658196;
+    margin-left: 25%;
+    transition:0.5s;
+}
+
 #display a:link, #display a:visited{
     text-decoration: none;
     color: #EBBCE7;
